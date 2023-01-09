@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Морской бой</title>
+    <link rel="stylesheet" href="ship.css">
+</head>
+<body>
+    
+    <script>
+        // alert("WARNING"); 2
+        // let name = prompt("Hello! How are u?");
+        // console.log(name)
+        let loc = Math.ceil(Math.random() * 8 );
+        console.log(loc);
+        let lenShip = 3;
+        let hits = 0, shorts = 0;
+        
+        let fields = [1,2,3,4,5,6,7,8,9,10];
+
+        while(hits < lenShip){
+
+        let userNum = prompt("Ваш выстрел " + fields);
+        shorts++;
+            // if(userNum != fields){
+            //     console.log('Введите другое число')
+            // }
+                if(userNum < 1 || userNum > 10) continue;
+
+            if(userNum >= loc && userNum < loc + lenShip){
+                
+                if(fields[userNum - 1] == 'x'){
+                    console.log("Уже стрелял");
+                } else {
+                    hits++;
+                fields[userNum - 1] = 'x';
+                console.log("YEAH");
+                } //if
+               
+            } else {
+                console.log("NOPE");
+                fields[userNum - 1] = 'o';
+            }// if окончен
+        } //while окончен
+
+        console.log('Win Меткость стрельбы ' + (Math.round(hits / shorts * 100)) + '%');
+
+        
+    </script>
+</body>
+</html>
