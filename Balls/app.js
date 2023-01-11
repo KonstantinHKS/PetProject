@@ -145,33 +145,3 @@
   }
   }
   
-
-
-
-      
-          
-
-      
-      
-
-// let Circles = document.getElementsByClassName('mainDiv');
-// let Circle = document.createElement('div');
-// Circles.appendChild(Circle); 
-
-// function createCircles(newCircle)
-// {
-//     // let div = document.createElement("div");
-//     // div.classList.add("Circle");
-
-//     // return div;
-
-//     for(let i = 0; i < 50; i++){
-
-//         let newCircle = document.createElement('div');
-//         newCircle.innerHTML = i;}
-//         newCircle.classList.add('Circle');
-//         document.body.append(newCircle);
-//         return newCircle;
-//     }
-// createCircles();
- 
